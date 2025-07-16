@@ -1,0 +1,79 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Shree Siddhivinayak CHS Ltd.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- Header Section -->
+  <header class="header">
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span class="logo-text">Shree Siddhivinayak CHS Ltd </span>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <button class="hamburger" aria-label="Toggle navigation">
+            &#9776; <!-- Hamburger icon (☰) -->
+        </button>
+            <ul class="nav-menu">
+                <li><a href="../ShreeSiddhivinayakCHS.html">Home</a></li>
+                <!-- <li><a href="/Siddhivinayak_Pages/about.html">About</a></li> -->
+                <!-- <li><a href="/Siddhivinayak_Pages/amenities.html">Amenities</a></li> -->
+                <li><a href="committees.html">Committees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <!-- <li><a href="/Siddhivinayak_Pages/gallery.html">Gallery</a></li> -->
+                <li><a href="members.html">Members</a></li>
+                <li><a href="notices.html">Notices</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <main>
+    <h2>Events</h2>
+    <p>Located in the heart of CBD Belapur, Shree Siddhivinayak CHS Ltd. offers a vibrant, secure, and family-friendly community.</p>
+    <img src="building.jpg" alt="Society Building" class="hero-img">
+  </main>
+  <footer>
+    &copy; 2025 Shree Siddhivinayak CHS Ltd.
+  </footer>
+
+
+
+
+  <!-- Add this JavaScript at the end of your HTML -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+  
+      // Toggle menu on hamburger click
+      hamburger.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+      });
+  
+      // Close menu when clicking a link
+      navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+              navMenu.classList.remove('active');
+          });
+      });
+  
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+          if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+              navMenu.classList.remove('active');
+          }
+      });
+  });
+  </script>
+</body>
+</html>
