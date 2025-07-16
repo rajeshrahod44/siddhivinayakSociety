@@ -5,18 +5,29 @@
     box-sizing: border-box;
   }
   
-  html, body {
+  html {
     height: 100%;
     font-family: "Segoe UI", sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    letter-spacing: 0.5px;
+    font-family:math;
   }
   
   body {
     display: flex;
     flex-direction: column;
   }
-  
+
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
   /* Header */
   header {
     background-color: #00796b;
@@ -58,23 +69,7 @@
     background-color: #ffc107; /* accent color */
     color: #000;
   }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-links li {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .nav-links li a {
-      width: 100%;
-    }
-  }
-  
+
   .nav-links li a.active {
     background-color: #26a69a;
     color: white;
@@ -122,19 +117,6 @@
     text-align: center;
   }
   
-  @media (max-width: 600px) {
-    section {
-      padding: 1.2rem;
-    }
-  
-    section h2 {
-      font-size: 1.5rem;
-    }
-  
-    section p {
-      font-size: 0.95rem;
-    }
-  }
   
   /* Hero Image */
   .hero-img {
@@ -147,6 +129,7 @@
   h1, h2, h3 {
     color: coral;
     text-align: center;
+    padding-top:10px
   }
   
   /* Paragraphs */
@@ -172,10 +155,11 @@
   
   /* Container Utility */
   .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-  }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
   
   /* Images */
   img {
@@ -184,6 +168,11 @@
   }
   
   /* Member Table */
+  .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
   .table-container {
     width: 90%;
     margin: 20px auto;
@@ -264,7 +253,8 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: #003366;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
+    font-family:math;
 }
 
 /* Navigation Menu */
@@ -297,8 +287,113 @@
   display: none;
 }
 
+.page-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.address-block {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.section-subtitle {
+    color: #34495e;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.address-details {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+}
+
+.nearby-areas, .nearby-cities {
+    margin-bottom: 2rem;
+}
+
+.nearby-title {
+    color: #e74c3c;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.locations-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.location-item {
+    background: #3498db;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.city-list {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-item {
+        background: #2c3e50;
+    }
+    
+    .city-list {
+        padding-left: 0;
+    }
+}
+
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+
+     .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links li a {
+      width: 100%;
+    }
+
+      section {
+      padding: 1.2rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    section p {
+      font-size: 0.95rem;
+    }
+
   .hamburger {
     display: block; /* Show hamburger on mobile */
   }
@@ -327,6 +422,18 @@
 
   .nav-menu.mobile-active {
       display: flex;
+  }
+
+  .logo-text {
+    font-size: 1.0rem;
+    font-weight: 700;
+    color: #003366;
+    letter-spacing: 0.5px;
+    font-family:math;
+}
+.table {
+    display: block;
+    overflow-x: auto;
   }
 }
 
