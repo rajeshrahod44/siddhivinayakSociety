@@ -7,7 +7,6 @@
   
   html {
     height: 100%;
-    font-family: "Segoe UI", sans-serif;
     background-color: #f4f4f4;
     color: #333;
     letter-spacing: 0.5px;
@@ -23,7 +22,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    min-height: calc(100vh - 80px - 60px); /* Adjust based on header/footer heights */
     background: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -79,23 +77,23 @@
   
   /* Main Content */
   main {
-    flex: 1;
-    padding: 2rem 1rem;
+    /* flex: 1;
+    padding: 2rem 1rem; */
     padding-top: 140px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
+    /* min-height: 60vh; */
   }
   
   /* Section Styling */
   section {
-    padding: 2rem 1rem;
-    margin: 1rem auto;
+    /* padding: 10rem 10rem; */
+    margin: 4rem auto;
     max-width: 1000px;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
@@ -104,18 +102,24 @@
     margin-bottom: 1rem;
     color: #2c3e50;
     text-align: center;
-  }
-  
-  section ul {
-    list-style: disc inside;
-    padding-left: 1rem;
+    margin-top:1rem;
   }
   
   section p {
-    font-size: 1rem;
     line-height: 1.6;
     color: #333;
     text-align: center;
+    padding: 3rem 5rem;
+    font-size: 18px;
+    margin: -30px;
+  }
+  section ul{
+   font-size: 16px;
+   line-height: 2.0;
+   color: #333;
+   padding: 2rem 2rem;
+   list-style: disc inside;
+   padding-left: 4rem;
   }
   
   
@@ -130,12 +134,7 @@
   h1, h2, h3 {
     color: coral;
     text-align: center;
-    padding-top:10px
-  }
-  
-  /* Paragraphs */
-  p {
-    margin: 0.5rem 0;
+    /* padding-top:10px */
   }
   
   /* Links */
@@ -215,7 +214,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 /* Header Styles */
@@ -290,7 +289,7 @@
 
 .page-title {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: coral;
     margin-bottom: 2rem;
     font-weight: 700;
     line-height: 1.2;
@@ -359,9 +358,16 @@ footer {
   width: 100%;
 }
 
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
-    .locations-grid {
+  .page-title {
+    font-size: 1.3rem;
+    color: coral;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 0.2;
+}
+      .locations-grid {
         grid-template-columns: 1fr;
     }
     
@@ -372,11 +378,6 @@ footer {
     .city-list {
         padding-left: 0;
     }
-}
-
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
 
      .nav-links {
       flex-direction: column;
@@ -400,9 +401,6 @@ footer {
       font-size: 1.5rem;
     }
   
-    section p {
-      font-size: 0.95rem;
-    }
 
   .hamburger {
     display: block; /* Show hamburger on mobile */
@@ -444,6 +442,30 @@ footer {
 .table {
     display: block;
     overflow-x: auto;
+  }
+
+  h1 {
+    color: coral;
+    text-align: center;
+    padding-top:8px
+  }
+
+  section p {
+    line-height: 1.6;
+    color: #333;
+    padding: 1rem 1rem;
+    font-size: 0.95rem;
+    text-align: justify-webkit-center;
+  }
+
+  section ul{
+   font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: auto;
+    padding: 1rem 1rem;
+    list-style: disc inside;
+    padding-left: 1rem;
   }
 }
 
